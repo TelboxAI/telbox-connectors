@@ -1,0 +1,28 @@
+{
+  "id": "telbox",
+  "name": "Telbox",
+  "version": "0.1.0-preview.2",
+  "description": "Propose a text message for approval in your Telbox account, then inspect its delivery status.",
+  "categories": ["channels"],
+  "cliCommands": [{ "name": "telbox", "description": "Set up the Telbox MCP connection", "hasSubcommands": true }],
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {}
+  },
+  "mcpServers": {
+    "telbox": {
+      "url": "https://api.telbox.ai/mcp",
+      "transport": "streamable-http",
+      "enabled": true,
+      "auth": "oauth",
+      "oauth": { "scope": "messages:write" },
+      "sslVerify": true,
+      "connectionTimeoutMs": 10000,
+      "requestTimeoutMs": 30000,
+      "toolFilter": {
+        "include": ["get_my_inbox", "send_message", "get_message_status"]
+      }
+    }
+  }
+}
