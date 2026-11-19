@@ -21,3 +21,5 @@ Connect an agent or automation to Telbox to propose a message for your approval.
 The ten platform packages were tested with private Telbox accounts. Some scenarios use a platform runtime, and others use a workflow or field-mapping fixture. The tests verified one approved message per platform and checked the exact decrypted text after reconnect. Marketplace installation, production tenant delivery and physical iPhone verification are tracked separately. The Grok download is a reviewer kit. Calls and TTS are outside this release.
 
 To verify a download, run `shasum -a 256 <filename>.zip` and compare its result with [SHA256SUMS](https://github.com/TelboxAI/telbox-connectors/releases/download/v0.1.0-preview.1/SHA256SUMS).
+
+[Marketplace submission receipts](SUBMISSIONS.md) · [Native OpenClaw, n8n and Dify downloads](https://github.com/TelboxAI/telbox-connectors/releases/tag/native-preview.1)
